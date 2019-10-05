@@ -1,0 +1,69 @@
+﻿create database ecad;
+
+
+***************************************
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Author](
+	[Id] [uniqueidentifier] NOT NULL,
+	[Code] [varchar](6) NOT NULL,
+	[Name] [varchar](50) NOT NULL,
+	[Category] [int] NOT NULL,
+ CONSTRAINT [PK_Author] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+*****************************************
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Music](
+	[Id] [uniqueidentifier] NOT NULL,
+	[Code] [varchar](6) NOT NULL,
+	[Name] [varchar](50) NOT NULL,
+	[Genre] [int] NOT NULL,
+ CONSTRAINT [PK_Music] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+*******************************************
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MusicAuthor](
+	[MusicId] [uniqueidentifier] NOT NULL,
+	[AuthorId] [uniqueidentifier] NOT NULL,
+ CONSTRAINT [PK_MusicAuthor] PRIMARY KEY CLUSTERED 
+(
+	[MusicId] ASC,
+	[AuthorId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+CREATE NONCLUSTERED INDEX [IX_MusicAuthor_AuthorId] ON [dbo].[MusicAuthor]
+(
+	[AuthorId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[MusicAuthor]  WITH CHECK ADD  CONSTRAINT [FK_MusicAuthor_Author_AuthorId] FOREIGN KEY([AuthorId])
+REFERENCES [dbo].[Author] ([Id])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[MusicAuthor] CHECK CONSTRAINT [FK_MusicAuthor_Author_AuthorId]
+GO
+ALTER TABLE [dbo].[MusicAuthor]  WITH CHECK ADD  CONSTRAINT [FK_MusicAuthor_Music_MusicId] FOREIGN KEY([MusicId])
+REFERENCES [dbo].[Music] ([Id])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[MusicAuthor] CHECK CONSTRAINT [FK_MusicAuthor_Music_MusicId]
+GO
