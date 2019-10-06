@@ -1,0 +1,44 @@
+<div>
+    <h1 class="title animated jackInTheBox">Musicas</h1>
+        <div>
+        
+                                <br>
+                <br>
+
+            <input type="text" placeholder="pesquisa por nome"  #pesq>
+            <button (click)="pesquisar(pesq.value)" class="buttonsearch"><i class="fas fa-users"></i></button>
+            <br><br>
+            <button routerLink='/createmusic' class="buttonmin"><i class="fa fa-plus"></i></button>
+<br><br>
+        </div>
+                <div class="animated flipInX" >
+                        <table *ngIf="responseMusics"> 
+                                <thead>
+                                   
+                                    <th>Nome</th>
+                                    <th>Genero</th>
+                                    <th>Autores</th>
+                                    <th>Editar</th>
+                                    <th>Apagar</th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let music of responseMusics.data">
+                                   
+                                            <td>{{music.name}}</td>
+                                            <td>{{music.genre}}</td>
+                                            <td>
+                                                <button routerLink="/musicauthor/{{music.id}}"><i class="fas fa-users"></i></button>
+                                            </td>
+                                            <td>
+                                                <button routerLink="/updatemusic/{{music.id}}"><i class="far fa-edit"></i></button>
+                                            </td>    
+                                            <td><button routerLink="/deletemusic/{{music.id}}"><i class="far fa-trash-alt"></i></button>
+                                            </td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                            
+                </div>
+</div>
+

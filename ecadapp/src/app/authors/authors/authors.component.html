@@ -1,0 +1,36 @@
+<div>
+        <h2 class="title animated jackInTheBox">Autores</h2>
+            <div>
+                 
+                <input type="text" placeholder="pesquisa por nome"  #pesq>
+                <button (click)="pesquisar(pesq.value)" class="buttonsearch"><i class="fas fa-users"></i></button>
+                <br>
+                    <br>
+                <button routerLink='/createauthor' class="buttonmin"><i class="fa fa-plus"></i></button>
+            </div>
+            <br>
+            <br>
+                            <table *ngIf="responseAuthor"> 
+                                    <thead>
+                                       
+                                        <th>Nome</th>
+                                        <th>Categoria</th>
+                                        <th>Editar</th>
+                                        <th>Apagar</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of responseAuthor.data">
+                                       
+                                                <td>{{item.name}}</td>
+                                                <td>{{item.category}}</td>
+                                                <td><a routerLink="/updateauthor/{{item.id}}"><i class="far fa-edit"></i></a></td>
+                                                <td><a routerLink="/deleteauthor/{{item.id}}"><i class="far fa-trash-alt"></i></a></td>
+                                        </tr>
+                                       
+                                    </tbody>
+                                </table>
+                                
+                    
+    </div>
+    
+    

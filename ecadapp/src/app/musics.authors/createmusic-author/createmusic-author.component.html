@@ -1,0 +1,18 @@
+<h2 class="title animated jackInTheBox">Associar autor</h2>
+<div>
+    <h3>{{req.MusicName}}</h3>
+    <label>Autor:</label>
+    <select [(ngModel)]="req.AuthorId" class="inputtext">
+            <option *ngFor="let item of req.data" [value]="item.id" >{{item.name}}</option>
+       
+
+    </select>
+    <br>
+    <br>
+    <button (click)="save()" class="myButton"><i class="fa fa-floppy-o"></i></button>
+    <button (click)="cancel()" class="myButton"><i class="fa fa-times"></i></button>  
+</div>
+<br>
+<br>
+
+

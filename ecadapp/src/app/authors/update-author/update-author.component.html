@@ -1,0 +1,24 @@
+<h2 class="title animated jackInTheBox">Editar Autor</h2>
+<div *ngIf="req">
+        
+        <br>
+        <label>Codigo:</label>
+        <input type="text" [(ngModel)]="req.code" class="inputtext" minlength="6" maxlength="6">
+        <br>
+        <label>Nome:</label>
+        <input type="text" [(ngModel)]="req.name" class="inputtext" minlength="3" maxlength="50">
+        <br>
+        <label>Genero:</label>
+        <select [(ngModel)]="req.category" class="inputtext">   
+        
+                <option value="1">Author</option>
+                <option value="2">Composer</option>
+                <option value="3">Performer</option>
+                <option value="4">Musician</option>
+                <option value="5">Other</option>
+        </select>
+        
+        <br><br>
+        <button (click)="save()"  class="myButton"><i class="fa fa-floppy-o"></i></button>
+        <button (click)="cancel()"  class="myButton"><i class="fa fa-times"></i></button>  
+    </div>

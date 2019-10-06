@@ -1,0 +1,248 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-align: justify;
+    background:  #ffffff;
+    background: -moz-linear-gradient(70deg, #ffffff 0%, #a89157 100%);
+    background: -webkit-linear-gradient(70deg, #ffffff 0%, #a89157 100%);
+    background: linear-gradient(70deg, #ffffff 0%, #eecc9a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3023ae', endColorstr='#a89157', GradientType=1);
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  ul {
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+    background: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+    -moz-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+    box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+  }
+
+  table {
+    width: 100%;
+    text-align: left;
+    /* margin: 10px; */
+    padding: 10px;
+    list-style: none;
+    background: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+    -moz-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+    box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+  }
+  
+  td {
+    padding: 15px;
+    margin: 10px;
+    font-size: 1em;
+    font-style: italic;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  td>button {
+    border: none;
+    background-color: #fff;
+    font-size: 1em;
+    float: right;
+    opacity: 0.6;
+    transition: opacity 1s;
+  }
+
+  td>button:hover {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+
+  thead{
+    font: bold;
+  }
+  
+
+  li {
+    padding: 15px;
+    margin: 10px;
+    font-size: 1em;
+    font-style: italic;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  li>button {
+    border: none;
+    background-color: #fff;
+    font-size: 1em;
+    float: right;
+    opacity: 0.6;
+    transition: opacity 1s;
+  }
+  
+  li>button:hover {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+  
+  .title {
+
+    font-family: 'Arimo', cursive;
+    color: #000;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 3px 5px #eecc9a ;
+      }
+
+  .titlemain {
+    font-family: 'Dancing Script', cursive;
+    color: #000;
+    font-size: 10em;
+     text-shadow: 3px 5px #eecc9a; 
+  }
+  
+   .text-center {
+    text-align: center;
+  } 
+  
+  .button {
+    background-color: #000000;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 100;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  #modal {
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+    background: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+    -moz-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+    box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+  }
+  
+  #modal>h1 {
+    font-weight: 300;
+  }
+  
+  input {
+    width: 85%;
+    line-height: 30px;
+    text-indent: 10px;
+    font-size: 1.2em;
+  }
+label{
+  width: 20%;
+}
+  .inputtext {
+    width: 100%;
+    line-height: 30px;
+    text-indent: 10px;
+    font-size: 1.2em;
+  }
+  
+  .buttonsearch {
+    border: none;
+    width: 10%;
+    line-height: 30px;
+    color:#ffffff;
+    box-shadow:inset 0px -3px 7px 0px #29bbff;
+    background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+    background-color:#2dabf9;
+    border-radius:3px;
+    border-radius:3px;
+    border:1px solid #0b0e07;
+    font-size: 1em;
+    float: inherit;
+    opacity: 1;
+    transition: opacity 1s;
+  }
+  .buttonsearch:hover {
+    background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+    background-color:#0688fa;
+  }
+  .buttonsearch:active {
+    position:relative;
+    top:1px;
+  }
+
+  .buttonmin{
+    border: none;
+    width: 10%;
+    line-height: 30px;
+    color:#ffffff;
+    box-shadow:inset 0px -3px 7px 0px #29bbff;
+    background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+    background-color:#2dabf9;
+    border-radius:3px;
+    border-radius:3px;
+    border:1px solid #0b0e07;
+    font-size: 1em;
+    float: inherit;
+    opacity: 1;
+    transition: opacity 1s;
+  }
+  .buttonmin:hover {
+    background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+    background-color:#0688fa;
+  }
+  .buttonmin:active {
+    position:relative;
+    top:1px;
+  }
+
+
+  .myButton {
+    box-shadow:inset 0px -3px 7px 0px #29bbff;
+    background-color:#2dabf9;
+    border-radius:3px;
+    border:1px solid #0b0e07;
+
+    text-align: center;
+    align-items: center;
+    
+    position: relative;
+    width:20%;
+    height:40%;
+    margin: 1rem;
+    left:10%;
+    top:50%;
+
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    padding:9px 23px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #263666;
+  }
+  .myButton:hover {
+    background-color:#0688fa;
+  }
+  .myButton:active {
+    position:relative;
+    top:1px;
+  }
+
+  .danger {
+    background-color: #ff0000;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 10px;
+  }

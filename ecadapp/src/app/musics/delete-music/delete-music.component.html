@@ -1,0 +1,12 @@
+<h2 class="title animated jackInTheBox">Apagar Musica</h2>
+<h2 class="danger">Voce deseja realmente remover esta musica?</h2>
+<div *ngIf="req">
+        <label>Codigo:</label>
+        <input type="text" value="{{req.code}}" readonly class="inputtext">
+        <label>Nome:{{req.name}}</label>
+        <input type="text" value="{{req.name}}" readonly class="inputtext">
+        <br><br>
+
+        <button (click)="delete()"  class="myButton"><i class="fa fa-floppy-o"></i></button>
+        <button (click)="cancel()"  class="myButton"><i class="fa fa-times"></i></button>    
+</div>

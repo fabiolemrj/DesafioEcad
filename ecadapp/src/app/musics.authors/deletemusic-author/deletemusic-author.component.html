@@ -1,0 +1,12 @@
+<h2 class="title animated jackInTheBox">apagar</h2>
+<h2 class="danger">Voce deseja realmente remover esta associação?</h2>
+<div *ngIf="id">
+        <label>Musica</label>
+        <input type="text" value="{{resp.nameMusic}}" readonly class="inputtext">
+        <label>Autor:</label>
+        <input type="text" value="{{resp.nameAuthor}}" readonly class="inputtext">
+        <br>
+        <br>
+        <button (click)="delete()"  class="myButton"><i class="fa fa-floppy-o"></i></button>
+        <button (click)="cancel()"  class="myButton"><i class="fa fa-times"></i></button>    
+</div>

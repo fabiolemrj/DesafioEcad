@@ -1,0 +1,31 @@
+<div>
+    <h2 class="title animated jackInTheBox">Pesquisa de Autores por musica</h2>
+        <div>
+            <button routerLink="/createmusicauthor/{{id}}" class="buttonmin"><i class="fa fa-plus"></i></button> 
+            <br><br>
+        </div>
+                <h2>{{responseMusicAuthor.name}}</h2>
+                
+                        <table > 
+                                <thead>
+                                   
+                                    <th>Nome</th>
+                                    <th>Categoria</th>
+                                    <th>Apagar</th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of responseMusicAuthor.data">
+                                   
+                                            <td>{{item.nameAuthor}}</td>
+                                            <td>{{item.categoryAuthor}}</td>
+                                            <td><button routerLink='/deletemusicauthor/{{id}}/{{item.authorId}}'><i class="far fa-trash-alt"></i></button>
+                                    
+                                            </td>                                            
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                            
+                
+</div>
+

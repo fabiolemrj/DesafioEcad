@@ -1,0 +1,27 @@
+<h2 class="title animated jackInTheBox">Nova Musica</h2>
+<div>
+    <label>Codigo:</label>
+    <input type="text" [(ngModel)]="req.code" class="inputtext" minlength="6" maxlength="6">
+    <br>
+    <label>Nome:</label>
+    <input type="text" [(ngModel)]="req.name" class="inputtext" minlength="3" maxlength="50">
+    <br>
+    <label>Genero:</label>
+    <select [(ngModel)]="req.genre" class="inputtext">   
+            <option value="1">Pop</option>
+            <option value="2">Rock</option>
+            <option value="3">Samba</option>
+            <option value="4">Gospel</option>
+            <option value="5">MPB</option>
+            <option value="6">Other</option>
+
+    </select>
+    <br>
+    <br>
+    <button (click)="save()" class="myButton"><i class="fa fa-floppy-o"></i></button>
+    <button (click)="cancel()" class="myButton"><i class="fa fa-times"></i></button>  
+</div>
+<br>
+<br>
+
+
