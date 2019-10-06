@@ -1,7 +1,8 @@
 FRONTEND
+Angular 8
 
 O projeto de front end foi dividivo em tres modulos de componentes: musica, author e musica-autor;
-O serviÁo aos serviÁos pode ser configurado nos compnentes responsaveis, descritos abaixo:
+O servi√ßo aos servi√ßos pode ser configurado nos compnentes responsaveis, descritos abaixo:
 variavel
   private url = "http://localhost:5000/v1";
 
@@ -25,52 +26,52 @@ O projeto foi desenvolvido, utilizado a tecnologia .Net Core
 ******************************************************************************
 Banco de dados
 ********************
-Esta soluÁ„o foi desenvolvida utilizando o banco de dados MSSQL Server 2017 (community).
-Dentro do projeto ecad.infra, existe a pasta "Scripts", onde est„o localizados os scripts necess·rios para rodar
+Esta solu√ß√£o foi desenvolvida utilizando o banco de dados MSSQL Server 2017 (community).
+Dentro do projeto ecad.infra, existe a pasta "Scripts", onde est√£o localizados os scripts necess√°rios para rodar
 no banco de dados.
-Para criar o banco de dados, È preciso executar o comando de migration, localizado na pasta de ecad.infra
+Para criar o banco de dados, √© preciso executar o comando de migration, localizado na pasta de ecad.infra
 
 Configurar ConnectioString:
-No projeto "ecad.api", existe um arquivo "appsettings.json", onde deve ser incluida a string de conex„o do banco de dados
+No projeto "ecad.api", existe um arquivo "appsettings.json", onde deve ser incluida a string de conex√£o do banco de dados
 
 ******************************************************************************
 Projetos
 ********************
 
 Dominio do problema
-N„o foi objetivo incluir muita complexidade ao projeto, e apenas atender as orientaÁıes solicitadas. 
-Criar um cadastro de musicas e autores, com associaÁ„o de N para N entre essas entidades.
+N√£o foi objetivo incluir muita complexidade ao projeto, e apenas atender as orienta√ß√µes solicitadas. 
+Criar um cadastro de musicas e autores, com associa√ß√£o de N para N entre essas entidades.
 
 **********************************
 Estrutura do Projeto:
 O projeto foi desenhado para funcionar em camadas, cada uma com sua responsabilidade e objetivo
 
 - ecad.api
-     Projeto Web API, exibe informaÁıes para o usu·rio
+     Projeto Web API, exibe informa√ß√µes para o usu√°rio
 
 - ecad.domain
-	camada de dominio da aplicaÁıes, onde se localizam as regras de negocio e 
-	processamento de informaÁıes relativas a este.
+	camada de dominio da aplica√ß√µes, onde se localizam as regras de negocio e 
+	processamento de informa√ß√µes relativas a este.
 	Obs.: As classes (entidades), foram criadas herdando a classe "Notifiable" existente do 
-	 pacote FluentValidator (vers„o 2.0.2), para ajudar na validaÁ„o de informaÁıes. 
+	 pacote FluentValidator (vers√£o 2.0.2), para ajudar na valida√ß√£o de informa√ß√µes. 
 	 Este foi baixado via NuGet.
 
 - ecad.infra
-	camada de infraestrutura, onde s„o colocados a ligaÁ„o da aplicaÁ„o com o banco de 
-	dados e outros serviÁos possam ser necess·rios
+	camada de infraestrutura, onde s√£o colocados a liga√ß√£o da aplica√ß√£o com o banco de 
+	dados e outros servi√ßos possam ser necess√°rios
 
 - ecad.shared
 	camadas para compartilha informcoes entre os projetos
 	
 - ecad.test
-	camada do projeto para realizaÁ„o dos testes da aplicaÁ„o
+	camada do projeto para realiza√ß√£o dos testes da aplica√ß√£o
     
 
 ***********************************
-DocumentaÁ„o
+Documenta√ß√£o
 
-Foi instalado no projeto ecad.api, um pacote da ferramenta de documentaÁ„o de Web API, SWAGGER!
-… possivel acessar a documentaÁ„o do projeto, tal como testar os endpoints, acessando o seguinte endereÁo url:
+Foi instalado no projeto ecad.api, um pacote da ferramenta de documenta√ß√£o de Web API, SWAGGER!
+√â possivel acessar a documenta√ß√£o do projeto, tal como testar os endpoints, acessando o seguinte endere√ßo url:
 
 http://host:port/swagger/
 
@@ -80,20 +81,20 @@ O projeto de testes foi dividido para realizar testes da camada de dominio do ap
 utilizando repositorios mocados e a tecnica de testes de unidades.
 
 ***********************************
-DocumentaÁ„o
+Documenta√ß√£o
 
 EndPoints Disponiveis
 
-Foi criado uma reposta padr„o para o resultado
+Foi criado uma reposta padr√£o para o resultado
 {
-    "success": true,(indicando se a operaÁ„o deu certo)
+    "success": true,(indicando se a opera√ß√£o deu certo)
     "message": "mensagem", (mensagem de sucesso ou falha)
-    "data": {Objeto gravado} (descriÁao do objeto gravado)
+    "data": {Objeto gravado} (descri√ßao do objeto gravado)
 }
 
 endpoints para tabela musica (MUSIC)
 
-retorna uma lista de objetos do tipo musica pela descriÁ„o do nome da musica
+retorna uma lista de objetos do tipo musica pela descri√ß√£o do nome da musica
 verbo:get
 v1/musicsbyname/{id}
 
@@ -124,7 +125,7 @@ retorna uma lista de objetos autores filtrados pelo nome
 verbo: get
 v1/authorsbyname/{id}
 
-lista de autores disponiveis para a musica selecionada, ou seja, que ainda n„o foram associados
+lista de autores disponiveis para a musica selecionada, ou seja, que ainda n√£o foram associados
 verbo: get
 v1/authorsavailable/{id}
 
@@ -150,7 +151,7 @@ v1/authors/{id}
 
 ****************************************************
 
-endpoints para tabela de associaÁ„o entre Musica e Autor (MUSICAUTHOR)
+endpoints para tabela de associa√ß√£o entre Musica e Autor (MUSICAUTHOR)
 
 
 Busca todos os autores associados a uma musica
@@ -161,7 +162,7 @@ busca lista de associacoes pelos IDs de musica autor
 verbo: get
 v1/musicsauthorsbyid/{musicid}/{authorid}
 
-Grava um nova associaÁ„o entre musica e autor
+Grava um nova associa√ß√£o entre musica e autor
 verbo: Post
 v1/musicsauthors
 
